@@ -21,7 +21,7 @@ import basemap from '../helper/basemap'
     onChangeDate.innerHTML = `[ ${displayDate} ]`;
   }
 
-  const dataJson = await fetch('/data/frontline.json');
+  const dataJson = await fetch('data/frontline.json');
   const data = await dataJson.json();
 
   function getColorFor(str) {
