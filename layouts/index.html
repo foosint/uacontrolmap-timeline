@@ -5,13 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UA Controlmap Timelines</title>
+  {{ $sass := resources.Get "scss/index.scss" }}
+  {{ $style := $sass | resources.ToCSS }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
 <body>
 
-<ul>
-  <li><a href="positions">UA / RU positions over time</a></li>
-  <li><a href="frontline">Frontline Changes</a></li>
-</ul>
+<div id="app">
+  <header>
+    <h3>UAControlMap Timelines</h3>
+  </header>
+  <div id="content">
+    <ul>
+      <li><a href="positions">UA / RU positions over time</a></li>
+      <li><a href="frontline">Frontline Changes</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
 </body>
 </html>
