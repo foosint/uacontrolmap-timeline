@@ -1,4 +1,5 @@
 import basemap from '../helper/basemap'
+import * as params from '@params';
 
 (async () => {
   const map = basemap();
