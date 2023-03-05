@@ -19,9 +19,9 @@ lerna-debug.log*
 *.sw?
 
 node_modules
-/data
+/_data
 /public
 /resources/_gen/
 /assets/jsconfig.json
 /.hugo_build.lock
-/src/hugo.exe
+hugo.exe

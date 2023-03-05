@@ -6,8 +6,8 @@ import * as fileHelper from './helper/files.js';
 
 
 // constants
-const DATA_IN = './data';
-const DATA_OUT = './src/static/data'; // for use in hugo
+const DATA_IN = './_data';
+const DATA_OUT = './static/data'; // for use in hugo
 
 const extractAllData = async (dailyPath, sortedFileList) => {
   // we need to unzip each kmz file to get the names of all

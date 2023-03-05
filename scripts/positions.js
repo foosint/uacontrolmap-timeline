@@ -4,8 +4,8 @@ import * as kmzHelper from './helper/kmz.js';
 
 
 // constants
-const DATA_TMP = './data';
-const DATA_OUT = './src/static/data'; // for use in hugo
+const DATA_TMP = './_data';
+const DATA_OUT = './static/data'; // for use in hugo
 
 
 const generateTimelineData = async (jsonData) => {

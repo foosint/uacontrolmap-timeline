@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "cd src && hugo.exe server",
-    "build": "cd src && hugo --destination ../public",
+    "dev": "hugo.exe server",
+    "build": "hugo",
     "data:positions": "node scripts/positions.js",
     "data:frontline": "node scripts/frontline.js"
   },
