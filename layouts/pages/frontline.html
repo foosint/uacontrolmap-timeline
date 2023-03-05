@@ -29,7 +29,7 @@
     </div>
   </div>
 
-  {{- $js := resources.Get "js/pages/frontline.js" | js.Build -}}
+  {{- $js := resources.Get "js/pages/frontline.js" | js.Build (dict "params" (dict "baseURL" .Site.BaseURL)) -}}
   <script src="{{ $js.RelPermalink }}" defer></script>
 </body>
 </html>
