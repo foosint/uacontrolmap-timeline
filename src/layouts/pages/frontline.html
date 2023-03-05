@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  {{ $sass := resources.Get "scss/index.scss" }}
+  {{ $style := $sass | resources.ToCSS }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>     
+    <script src="/js/leaflet.timeline.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h3>Ukraine Frontline Timeline</h3>
+    </header>
+    <div id="content">
+      <div id="on-change-date"></div>
+      <main>        
+        <div id="map"></div>
+      </main>
+    </div>
+  </div>
+
+  {{- $js := resources.Get "js/pages/frontline.js" | js.Build -}}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</body>
+</html>
