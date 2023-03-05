@@ -21,7 +21,7 @@ import basemap from '../helper/basemap'
     onChangeDate.innerHTML = `[ ${displayDate} ]`;
   }
 
-  const dataJson = await fetch('data/positions.json');
+  const dataJson = await fetch('./data/positions.json');
   const data = await dataJson.json();
 
   const getInterval = function (pos) {
